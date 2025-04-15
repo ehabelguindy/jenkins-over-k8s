@@ -1,6 +1,10 @@
 pipeline {
 
     agent any
+    tools {
+        maven 'Maven' // 👈 Make sure this matches the name in your Jenkins tool config
+    }
+    
     environment {
         registry = "gamalm2041/myapp_image"
         registryCredential = 'dockerhub'
