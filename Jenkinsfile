@@ -47,7 +47,7 @@ pipeline {
 
         stage('Remove Container') {
             steps{
-              sh 'docker rm -f lab$BUILD_NUMBER'
+              sh 'sudo docker rm -f lab$BUILD_NUMBER'
             }
             post {
                 success {
