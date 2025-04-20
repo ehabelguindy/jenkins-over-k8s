@@ -8,6 +8,7 @@ pipeline {
     environment {
         registry = "gamalm2041/myapp_image"
         registryCredential = 'dockerhub'
+         KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
 
     stages{
